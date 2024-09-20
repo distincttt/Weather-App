@@ -33,17 +33,17 @@ const weatherSlice = createAppSlice({
    reducers: (create) => ({
       fetchWeather: create.asyncThunk(fetchWeatherApi, {
          fulfilled: (state, action: PayloadAction<WeatherResponse>) => {
-            // console.log(action.payload);
+            state.error = false;
             state.weather = {
                image: `/src/images/${action.payload.weather[0].main}.png`,
-               temperature: action.payload.main.temp,
+               temperature: Math.floor(action.payload.main.temp),
                description: action.payload.weather[0].description,
                humidity: action.payload.main.humidity,
                wind: action.payload.wind.speed,
             };
          },
-         rejected: (state, action: PayloadAction<WeatherResponse>) => {
-            console.log(action.payload);
+         rejected: (state) => {
+            state.error = true;
          },
       }),
    }),
