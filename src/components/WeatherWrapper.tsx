@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import Search from "./WeatherSearch";
-import Main from "./Weather";
-import Info from "./WeatherInfo";
-import NotFound from "./WeatherNotfound";
+import WeatherSearch from "./WeatherSearch";
+import Weather from "./Weather";
+import WeatherInfo from "./WeatherInfo";
+import WeatherNotFound from "./WeatherNotfound";
 
 import { useAppSelector } from "../types/hooks";
 
@@ -21,7 +21,9 @@ const WeatherWrapperContainer = styled.div<{ height: string }>`
 `;
 
 const WeatherWrapper = (): JSX.Element => {
-   const { weather, error } = useAppSelector((state) => state.weatherSlice);
+   const { weather, error, loading } = useAppSelector(
+      (state) => state.weatherSlice
+   );
 
    let weatherContainerHeight = "99px";
    if (weather.description) weatherContainerHeight = "555px";
@@ -29,14 +31,14 @@ const WeatherWrapper = (): JSX.Element => {
 
    return (
       <WeatherWrapperContainer height={weatherContainerHeight}>
-         <Search />
-         {!error && weather.description && (
+         <WeatherSearch />
+         {!error && weather.description && !loading && (
             <>
-               <Main />
-               <Info />
+               <Weather />
+               <WeatherInfo />
             </>
          )}
-         {error && <NotFound />}
+         {error && <WeatherNotFound />}
       </WeatherWrapperContainer>
    );
 };

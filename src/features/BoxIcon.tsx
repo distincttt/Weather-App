@@ -3,7 +3,7 @@ import { IconName } from "boxicons";
 
 interface BoxIconProps {
    name: IconName;
-   onClick?: () => void;
+   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
    button?: boolean;
 }
 

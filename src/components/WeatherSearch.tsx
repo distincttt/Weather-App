@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import BoxIcon from "../features/BoxIcon";
 import { fetchWeather } from "../redux/weatherSlice";
 import { useAppDispatch } from "../types";
 
-const WeatherSearchContainer = styled.div`
+const WeatherSearchContainer = styled.form`
    position: relative;
    width: 100%;
    height: 55px;
@@ -61,7 +61,8 @@ const WeatherSearch = (): JSX.Element => {
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setCity(e.target.value);
    };
-   const onClick = () => {
+   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
       dispatch(fetchWeather(city));
    };
    return (

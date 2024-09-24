@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { useAppSelector } from "../types";
@@ -40,19 +40,13 @@ const AnimationContainer = styled.div<{ transform: string }>`
 
 const Weather = (): JSX.Element => {
    const { weather } = useAppSelector((state) => state.weatherSlice);
-   const initialTranslateY = useRef("translateY(-100%)");
-   const [translateY, setTranslateY] = useState<string>(
-      initialTranslateY.current
-   );
-   console.log(translateY);
+   const [translateY, setTranslateY] = useState<string>("translateY(-100%)");
 
    useEffect(() => {
-      console.log("render");
       setTimeout(() => {
          setTranslateY("translateY(0%)");
       }, 600);
-      return setTranslateY(initialTranslateY.current);
-   }, [weather]);
+   }, []);
    return (
       <WeatherContainer>
          <AnimationContainer transform={translateY}>

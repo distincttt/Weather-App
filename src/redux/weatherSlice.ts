@@ -14,6 +14,7 @@ const createAppSlice = buildCreateSlice({
 type InitialState = {
    weather: Weather;
    error: boolean;
+   loading: boolean;
 };
 
 const initialState: InitialState = {
@@ -25,6 +26,7 @@ const initialState: InitialState = {
       wind: 0,
    },
    error: false,
+   loading: false,
 };
 
 const weatherSlice = createAppSlice({
@@ -32,7 +34,11 @@ const weatherSlice = createAppSlice({
    initialState,
    reducers: (create) => ({
       fetchWeather: create.asyncThunk(fetchWeatherApi, {
+         pending: (state) => {
+            state.loading = true;
+         },
          fulfilled: (state, action: PayloadAction<WeatherResponse>) => {
+            state.loading = false;
             state.error = false;
             state.weather = {
                image: `/src/images/${action.payload.weather[0].main}.png`,
@@ -43,6 +49,7 @@ const weatherSlice = createAppSlice({
             };
          },
          rejected: (state) => {
+            state.loading = false;
             state.error = true;
          },
       }),
