@@ -5,7 +5,7 @@ import {
 } from "@reduxjs/toolkit";
 
 import { fetchWeatherApi } from "../api/weatherApi";
-import { Weather, WeatherResponse } from "../types/types";
+import { Weather, WeatherResponse } from "../types";
 
 const createAppSlice = buildCreateSlice({
    creators: { asyncThunk: asyncThunkCreator },

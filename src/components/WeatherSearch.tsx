@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { useState } from "react";
 
-import BoxIcon from "../BoxIcon/BoxIcon";
-import { fetchWeather } from "../../redux/weatherSlice";
-import { useAppDispatch } from "../../types/hooks";
+import BoxIcon from "../features/BoxIcon";
+import { fetchWeather } from "../redux/weatherSlice";
+import { useAppDispatch } from "../types";
 
-const SearchContainer = styled.div`
+const WeatherSearchContainer = styled.div`
    position: relative;
    width: 100%;
    height: 55px;
@@ -53,20 +53,19 @@ const SearchContainer = styled.div`
    }
 `;
 
-const Search = () => {
-   const [city, setCity] = useState("Saint Petersburg");
+const WeatherSearch = (): JSX.Element => {
+   const [city, setCity] = useState("");
 
    const dispatch = useAppDispatch();
 
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      e.preventDefault();
       setCity(e.target.value);
    };
    const onClick = () => {
       dispatch(fetchWeather(city));
    };
    return (
-      <SearchContainer>
+      <WeatherSearchContainer>
          <BoxIcon name="bx bxs-map" />
          <input
             type="text"
@@ -74,8 +73,8 @@ const Search = () => {
             onChange={handleChange}
          />
          <BoxIcon name="bx bx-search" onClick={onClick} button />
-      </SearchContainer>
+      </WeatherSearchContainer>
    );
 };
 
-export default Search;
+export default WeatherSearch;

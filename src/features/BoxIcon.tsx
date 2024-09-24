@@ -7,7 +7,11 @@ interface BoxIconProps {
    button?: boolean;
 }
 
-const BoxIcon: React.FC<BoxIconProps> = ({ name, onClick, button = false }) => {
+const BoxIcon: React.FC<BoxIconProps> = ({
+   name,
+   onClick,
+   button = false,
+}): JSX.Element => {
    return (
       <>
          {!button && <i className={`${name}`} />}

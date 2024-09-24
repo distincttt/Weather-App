@@ -1,7 +1,10 @@
 import { baseUrl } from "./baseUrl";
 import { APIKey } from "./baseUrl";
+import { WeatherResponse } from "../types";
 
-export const fetchWeatherApi = async (city: string = "Saint Petersburg") => {
+export const fetchWeatherApi = async (
+   city: string = "Saint Petersburg"
+): Promise<WeatherResponse> => {
    const response = await fetch(
       `${baseUrl}${city}&units=metric&appid=${APIKey}`
    );
