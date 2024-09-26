@@ -8,16 +8,6 @@ export const WeatherNotFoundContainer = styled.div`
    text-align: center;
    margin-top: 20px;
    overflow: hidden;
-
-   img {
-      width: 65%;
-   }
-
-   p {
-      font-size: 22px;
-      font-weight: 500;
-      margin-top: 12px;
-   }
 `;
 
 export const Image = styled.img`

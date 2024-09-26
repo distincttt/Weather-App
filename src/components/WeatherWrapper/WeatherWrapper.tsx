@@ -4,7 +4,7 @@ import { WeatherInfo } from "../WeatherInfo";
 import { WeatherNotFound } from "../WeatherNotfound";
 
 import { WeatherWrapperContainer } from "./WeatherWrapperStyle";
-import { useWeather } from "../../shared/hooks";
+import { useWeather } from "../../shared";
 
 export const WeatherWrapper = (): JSX.Element => {
    const [weather, error, loading, weatherContainerHeight] = useWeather();

@@ -1,6 +1,6 @@
 import { BoxIcon } from "../../shared";
 import { Input, WeatherSearchContainer } from "./WeatherSearchStyle";
-import { useSearch } from "../../shared/hooks/use-search";
+import { useSearch } from "../../shared";
 
 export const WeatherSearch = (): JSX.Element => {
    const [handleChange, onClick] = useSearch();

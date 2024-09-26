@@ -1,7 +1,7 @@
 import { useAppSelector } from "../../shared";
 import { WeatherInfoContainer } from "./WeatherInfoStyle";
 import { HumidityWind } from "./HumidityWind";
-import { useAnimation } from "../../shared/hooks/use-animation";
+import { useAnimation } from "../../shared";
 
 export const WeatherInfo = (): JSX.Element => {
    const { weather } = useAppSelector((state) => state.weatherSlice);

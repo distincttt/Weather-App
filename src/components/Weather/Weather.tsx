@@ -1,5 +1,5 @@
 import { useAppSelector } from "../../shared";
-import { AnimationContainer } from "../../shared/AnimationContainer";
+import { AnimationContainer } from "../../shared";
 import {
    Description,
    Image,

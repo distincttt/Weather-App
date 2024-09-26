@@ -1,6 +1,6 @@
-import { AnimationContainer } from "../../shared/AnimationContainer";
+import { AnimationContainer } from "../../shared";
 import { Image, P, WeatherNotFoundContainer } from "./WeatherNotFoundStyle";
-import { useAnimation } from "../../shared/hooks/use-animation";
+import { useAnimation } from "../../shared";
 
 export const WeatherNotFound = (): JSX.Element => {
    const translateY = useAnimation(600);
