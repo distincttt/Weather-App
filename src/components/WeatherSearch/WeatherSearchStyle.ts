@@ -12,26 +12,6 @@ export const WeatherSearchContainer = styled.form`
    height: 55px;
    display: flex;
    align-items: center;
-
-   i {
-      position: absolute;
-      left: 10px;
-      font-size: 28px;
-   }
-
-   button {
-      position: absolute;
-      right: 0;
-      width: 40px;
-      height: 100%;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-size: 28px;
-      color: #fff;
-      padding: 0 40px 0 5px;
-      cursor: pointer;
-   }
 `
 
 export const Input = styled.input`
@@ -62,9 +42,9 @@ export const I = styled.i.attrs<{ className: IconName }>((props) => ({
    font-size: 28px;
 `
 
-export const Button = styled.button.attrs<BoxIconProps>((props) => ({
-   className: props.className,
-   onClick: props.onClick,
+export const Button = styled.button.attrs<BoxIconProps>(({ className, onClick }) => ({
+   className: className,
+   onClick: onClick,
 }))`
    position: absolute;
    right: 0;

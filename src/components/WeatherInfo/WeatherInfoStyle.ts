@@ -35,8 +35,8 @@ export const HumidityWindStyle = styled.div<{
    transform: ${({ transform }) => transform};
    transition: transform 1s ease;
 `
-export const I = styled.i.attrs<{ className: IconName }>((props) => ({
-   className: props.className,
+export const I = styled.i.attrs<{ className: IconName }>(({ className }) => ({
+   className: className,
 }))`
    font-size: 56px;
    margin-right: 10px;
