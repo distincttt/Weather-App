@@ -1,7 +1,5 @@
-import WeatherWrapper from "../components/WeatherWrapper";
+import { WeatherWrapper } from "../components";
 
-const App = (): JSX.Element => {
+export const App = (): JSX.Element => {
    return <WeatherWrapper />;
 };
-
-export default App;

@@ -7,7 +7,7 @@ interface BoxIconProps {
    button?: boolean;
 }
 
-const BoxIcon: React.FC<BoxIconProps> = ({
+export const BoxIcon: React.FC<BoxIconProps> = ({
    name,
    onClick,
    button = false,
@@ -19,5 +19,3 @@ const BoxIcon: React.FC<BoxIconProps> = ({
       </>
    );
 };
-
-export default BoxIcon;

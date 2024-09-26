@@ -1,0 +1,1 @@
+export { fetchWeatherApi } from "./weatherApi";
