@@ -1,1 +1,1 @@
-export { WeatherWrapper } from "./WeatherWrapper";
+export { WeatherWrapper } from './WeatherWrapper'

@@ -1,3 +1,3 @@
-declare module "boxicons" {
-   export type IconName = string;
+declare module 'boxicons' {
+  export type IconName = string
 }

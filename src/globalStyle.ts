@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
-import BackgroundImg from "../src/images/background.jpg";
+import BackgroundImg from '../src/images/background.jpg'
 
 export const GlobalStyle = createGlobalStyle`
 *{
@@ -19,4 +19,4 @@ background :url('${BackgroundImg}');
 background-size:cover;
 background-position:center;
 }
-`;
+`

@@ -1,1 +1,1 @@
-export { WeatherNotFound } from "./WeatherNotfound";
+export { WeatherNotFound } from './WeatherNotfound'
