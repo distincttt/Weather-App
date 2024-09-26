@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../shared/types";
+import { useAppSelector } from "../../shared";
 import { WeatherInfoContainer } from "./WeatherInfoStyle";
 import { HumidityWind } from "./HumidityWind";
 import { useAnimation } from "../../shared/hooks/use-animation";

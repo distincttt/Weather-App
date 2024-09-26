@@ -1,4 +1,4 @@
-import BoxIcon from "../../shared/BoxIcon";
+import { BoxIcon } from "../../shared";
 import { Input, WeatherSearchContainer } from "./WeatherSearchStyle";
 import { useSearch } from "../../shared/hooks/use-search";
 

@@ -1,4 +1,4 @@
-import BoxIcon from "../../shared/BoxIcon";
+import { BoxIcon } from "../../shared";
 import { HumidityWindStyle, P, Span } from "./WeatherInfoStyle";
 
 interface HumidityWindProps {
