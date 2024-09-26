@@ -1,30 +1,29 @@
-import { BoxIcon } from '../../shared'
-import { HumidityWindStyle, P, Span } from './WeatherInfoStyle'
+import { HumidityWindStyle, I, P, Span } from './WeatherInfoStyle'
 
 interface HumidityWindProps {
-  name: string
-  translateY: string
-  boxIconName: string
-  humidityWind: string
-  padding: string
-  flex: string
+   name: string
+   translateY: string
+   boxIconName: string
+   humidityWind: string
+   padding: string
+   flex: string
 }
 
 export const HumidityWind = ({
-  name,
-  translateY,
-  boxIconName,
-  humidityWind,
-  padding,
-  flex,
+   name,
+   translateY,
+   boxIconName,
+   humidityWind,
+   padding,
+   flex,
 }: HumidityWindProps): JSX.Element => {
-  return (
-    <HumidityWindStyle transform={translateY} $padding={padding} $flex={flex}>
-      <BoxIcon name={boxIconName} />
-      <div>
-        <Span>{humidityWind}</Span>
-        <P>{name}</P>
-      </div>
-    </HumidityWindStyle>
-  )
+   return (
+      <HumidityWindStyle transform={translateY} $padding={padding} $flex={flex}>
+         <I className={boxIconName} />
+         <div>
+            <Span>{humidityWind}</Span>
+            <P>{name}</P>
+         </div>
+      </HumidityWindStyle>
+   )
 }

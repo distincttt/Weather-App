@@ -7,18 +7,18 @@ import { WeatherWrapperContainer } from './WeatherWrapperStyle'
 import { useWeather } from '../../shared'
 
 export const WeatherWrapper = (): JSX.Element => {
-  const [weather, error, loading, weatherContainerHeight] = useWeather()
+   const [weather, error, loading, weatherContainerHeight] = useWeather()
 
-  return (
-    <WeatherWrapperContainer height={weatherContainerHeight}>
-      <WeatherSearch />
-      {!error && weather.description && !loading && (
-        <>
-          <Weather />
-          <WeatherInfo />
-        </>
-      )}
-      {error && <WeatherNotFound />}
-    </WeatherWrapperContainer>
-  )
+   return (
+      <WeatherWrapperContainer height={weatherContainerHeight}>
+         <WeatherSearch />
+         {!error && weather.description && !loading && (
+            <>
+               <Weather />
+               <WeatherInfo />
+            </>
+         )}
+         {error && <WeatherNotFound />}
+      </WeatherWrapperContainer>
+   )
 }

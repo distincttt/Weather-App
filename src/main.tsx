@@ -6,8 +6,8 @@ import { App } from './App/App.tsx'
 import { GlobalStyle } from './globalStyle.ts'
 
 createRoot(document.getElementById('root')!).render(
-  <Provider store={store}>
-    <GlobalStyle />
-    <App />
-  </Provider>,
+   <Provider store={store}>
+      <GlobalStyle />
+      <App />
+   </Provider>,
 )
