@@ -10,12 +10,15 @@ interface BoxIconProps {
 export const BoxIcon: React.FC<BoxIconProps> = ({
    name,
    onClick,
-   button = false,
+   button,
 }): JSX.Element => {
    return (
       <>
-         {!button && <i className={`${name}`} />}
-         {button && <button className={`${name}`} onClick={onClick} />}
+         {button ? (
+            <button className={`${name}`} onClick={onClick} />
+         ) : (
+            <i className={`${name}`} />
+         )}
       </>
    );
 };
