@@ -7,7 +7,7 @@ export const WeatherNotFound = (): JSX.Element => {
    return (
       <WeatherNotFoundContainer>
          <AnimationContainer transform={translateY}>
-            <Image src='/src/images/404.png' alt='Not found' />
+            <Image src='/images/404.png' alt='Not found' />
             <P>Oops! Location not found.</P>
          </AnimationContainer>
       </WeatherNotFoundContainer>

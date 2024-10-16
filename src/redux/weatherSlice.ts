@@ -37,7 +37,7 @@ const weatherSlice = createAppSlice({
             state.loading = false
             state.error = false
             state.weather = {
-               image: `/src/images/${action.payload.weather[0].main}.png`,
+               image: `/images/${action.payload.weather[0].main}.png`,
                temperature: Math.floor(action.payload.main.temp),
                description: action.payload.weather[0].description,
                humidity: action.payload.main.humidity,
