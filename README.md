@@ -5,7 +5,7 @@ React + TypeScript + Redux + Styled-components
 ## To run locally
 
 ```bash
-git clone https://github.com/cinamon1212/Disney-App.git
+git clone https://github.com/distincttt/Weather-App.git
 yarn install
 yarn run dev
 ```
